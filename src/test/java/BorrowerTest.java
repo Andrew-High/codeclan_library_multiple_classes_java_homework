@@ -12,6 +12,7 @@ public class BorrowerTest {
     public void before(){
         borrower = new Borrower();
         book = new Book("Northern Lights", "Philip Pullman", "Fantasy");
+        library = new Library ("Falkirk Library");
     }
 
     @Test

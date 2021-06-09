@@ -36,4 +36,9 @@ public class Library {
             return false;
         }
     }
+
+    public Book checkOutBook(Book book) {
+        this.collection.remove(book);
+        return book;
+    }
 }

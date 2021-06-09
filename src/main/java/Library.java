@@ -8,6 +8,7 @@ public class Library {
     public Library(String name){
         this.name = name;
         this.collection = new ArrayList<>();
+        this.capacity = 2;
     }
 
     public String getName() {
@@ -23,6 +24,16 @@ public class Library {
     }
 
     public void addBookToCollection(Book book){
-        this.collection.add(book);
+        if (checkIfStockFull() == false) {
+            this.collection.add(book);
+        }
+    }
+
+    public boolean checkIfStockFull() {
+        if (getCollectionSize() == getCapacity()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
